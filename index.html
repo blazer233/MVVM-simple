@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Vue双向绑定原理及实现</title>
+	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap-grid.min.css" rel="stylesheet">
+	<style>
+		#app {
+			margin: 20px auto;
+			padding: 200px;
+			text-align: center;
+			border: 2px solid #ccc;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<div class="container">
+			<input class="form-control" v-model="name" type="text">
+			<h1>{{name}}</h1>
+		</div>
+	</div>
+	<script src="./index.js"></script>
+	<script>
+		const vm = new Mvue({
+			el: "#app",
+			data: {
+				name: "测试"
+			}
+		});
+	</script>
+</body>
+
+</html>
